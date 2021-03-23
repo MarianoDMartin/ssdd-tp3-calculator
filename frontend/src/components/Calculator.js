@@ -21,7 +21,7 @@ class Calculator extends Component {
         this.state.loading = true;
         backend.Execute(this.state.data)
         .then((response) => {
-
+            this.state.data = response.data;
         })
         .catch((error) => {
             console.log(error);
