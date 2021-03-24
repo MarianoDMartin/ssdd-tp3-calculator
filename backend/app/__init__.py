@@ -14,6 +14,4 @@ def create_app():
 
     api.init_app(app)
 
-    context['app'] = app
-
     return app
