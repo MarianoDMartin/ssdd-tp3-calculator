@@ -37,3 +37,9 @@ To install dependencies required for this app, do the following:
 * run following command: `pip3 install -r requirements.txt`
 
 This should  be executed with active venv. You should see a (venv) at the start of the command line.
+
+### Execute program
+
+To run the program, simply follow these steps:
+* Working directory must be `/backend`
+* run following command: `python3 __main__.py`
