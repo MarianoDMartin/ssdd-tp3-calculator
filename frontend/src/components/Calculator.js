@@ -18,6 +18,8 @@ class Calculator extends Component {
     }
 
     send_formula = () => {
+        console.log("sending to api");
+        console.log(this.state.data)
         this.state.loading = true;
         backend.Execute(this.state.data)
         .then((response) => {
@@ -62,18 +64,19 @@ class Calculator extends Component {
                     <Button onClick={this.handleClick} label="8" value="8" />
                     <Button onClick={this.handleClick} label="5" value="5" />
                     <Button onClick={this.handleClick} label="2" value="2" />
-                    <Button onClick={this.handleClick} label="." value="." /> 
+                    <Button onClick={this.handleClick} label="(" value="(" /> 
 
                     <Button onClick={this.handleClick} label="x" value="*" /> 
                     <Button onClick={this.handleClick} label="9" value="9" />   
                     <Button onClick={this.handleClick} label="6" value="6" />
                     <Button onClick={this.handleClick} label="3" value="3" />
-                    <Button onClick={this.handleClick} label="" value="null" /> 
+                    <Button onClick={this.handleClick} label=")" value=")" /> 
 
                     <Button onClick={this.handleClick} label="-" value="-" />
                     <Button onClick={this.handleClick} label="+" value="+" /> 
-                    <Button onClick={this.handleClick} label="**" value="**" />
+                    <Button onClick={this.handleClick} label="^" value="**" />
                     <Button onClick={this.handleClick} label="=" size="2" value="equal" />
+
                 </Keypad>
             </div>
         );
